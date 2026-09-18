@@ -11,7 +11,7 @@
         />
       </div>
       <div class="info">
-        <div class="username">{{ isLogin ? userInfo.username : $t('my.notLoggedIn') }}</div>
+        <div class="username">{{ isLogin && userInfo ? userInfo.username : $t('my.notLoggedIn') }}</div>
         <div class="desc" v-if="isLogin">{{ userBio || $t('profile.bio') }}</div>
       </div>
       <van-icon name="arrow" class="arrow-icon" />
